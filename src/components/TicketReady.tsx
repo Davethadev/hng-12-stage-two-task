@@ -34,9 +34,12 @@ const TicketReady = ({
           <span className="font-medium hover:cursor-pointer">download</span>
         </p>
       </div>
-      <div className="w-[95%] md:w-xs mx-auto space-y-4 ticket">
-        <div className="border border-[#24A0B5] rounded-lg bg-[#041E23] p-3 space-y-8 w-full">
-          <div className="border border-[#24A0B5] rounded-lg p-3 space-y-5 w-full">
+      <div className="w-[300px] h-[670px] mx-auto space-y-4 relative">
+        <div className="w-[300px] h-[601px]">
+          <img src="./ticket-bg.svg" alt="" className="w-full h-full" />
+        </div>
+        <div className="absolute inset-0 px-4 py-6 top-0">
+          <div className="border border-[#24A0B5] rounded-lg p-3 space-y-2 w-[95%] mx-auto">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-medium text-white road-rage">
                 Techember Fest ”25
@@ -57,7 +60,7 @@ const TicketReady = ({
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 rounded-lg w-full p-2 ">
+            <div className="grid grid-cols-2 gap-3 rounded-lg w-full p-2 bg-[#08343C]">
               <div className="space-y-2">
                 <small className="text-[#B3B3B3] roboto font-light">
                   Enter your name
@@ -69,7 +72,7 @@ const TicketReady = ({
                   Enter your email
                 </small>
                 <p className="roboto text-white font-medium text-sm">
-                  {email.length > 14 ? `${email.substring(0, 14)}...` : email}
+                  {email.length > 10 ? `${email.substring(0, 10)}...` : email}
                 </p>
               </div>
               <div className="space-y-2">
@@ -95,20 +98,20 @@ const TicketReady = ({
                 <small className="roboto text-white font-light block w-full">
                   {specialRequest === ""
                     ? "Nil"
-                    : specialRequest.length > 136
-                    ? `${specialRequest.substring(0, 136)}...`
+                    : specialRequest.length > 16
+                    ? `${specialRequest.substring(0, 16)}...`
                     : specialRequest}
                 </small>
               </div>
             </div>
           </div>
           <div></div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-8">
             <img src="./barcode.svg" alt="" />
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <button
           onClick={bookAnotherTicket}
           className="h-12 border border-[#0E464F] rounded-md text-[#24A0B5] text-center hover:cursor-pointer"

@@ -81,7 +81,7 @@ const AttendeeDetails = ({
                 setTicketDetails({ ...ticketDetails, name: e.target.value })
               }
               required
-              className="h-12 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg indent-4 text-white roboto font-light"
+              className="h-12 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg indent-4 text-white text-sm roboto font-light"
             />
           </div>
           <div className="space-y-2">
@@ -101,7 +101,7 @@ const AttendeeDetails = ({
                   setTicketDetails({ ...ticketDetails, email: e.target.value })
                 }
                 required
-                className="h-12 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg indent-12 text-white roboto font-light"
+                className="h-12 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg indent-12 text-white text-sm roboto font-light"
               />
               <span className="absolute left-4 top-3">
                 <img src="./envelope.svg" alt="" />
@@ -127,7 +127,7 @@ const AttendeeDetails = ({
                 })
               }
               value={ticketDetails.specialRequest}
-              className="h-36 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg p-4 text-white roboto font-light"
+              className="h-36 w-full border border-[#0E464F] outline-none bg-transparent rounded-lg p-4 text-white text-sm roboto font-light"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
