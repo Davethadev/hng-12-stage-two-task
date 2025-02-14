@@ -98,8 +98,8 @@ const TicketReady = ({
                 <small className="roboto text-white font-light block w-full">
                   {specialRequest === ""
                     ? "Nil"
-                    : specialRequest.length > 16
-                    ? `${specialRequest.substring(0, 16)}...`
+                    : specialRequest.length > 32
+                    ? `${specialRequest.substring(0, 32)}...`
                     : specialRequest}
                 </small>
               </div>
